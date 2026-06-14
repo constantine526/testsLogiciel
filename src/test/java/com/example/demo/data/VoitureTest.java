@@ -22,5 +22,13 @@ public class VoitureTest {
         assertEquals(0, v.getPrix());
         assertEquals(0, v.getId());
     }
+
+    @Test
+    void constructeurAvecParametres() {
+    Voiture v = new Voiture("Ferrari", 2000);
+
+    assertEquals("Ferrari", v.getMarque());
+    assertEquals(2000, v.getPrix());
+}
 }
 
