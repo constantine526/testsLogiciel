@@ -47,5 +47,14 @@ public class VoitureTest {
 
     assertEquals(15000, v.getPrix());
 }
+
+    @Test
+    void testId() {
+    Voiture v = new Voiture();
+
+    v.setId(42);
+
+    assertEquals(42, v.getId());
+}
 }
 
