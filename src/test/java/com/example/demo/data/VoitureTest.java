@@ -56,5 +56,15 @@ public class VoitureTest {
 
     assertEquals(42, v.getId());
 }
+    @Test
+    void testToString() {
+    Voiture v = new Voiture("Ferrari", 2000);
+    v.setId(1);
+
+    assertEquals(
+            "Car{marque='Ferrari', prix=2000, id=1}",
+            v.toString()
+    );
+}
 }
 
