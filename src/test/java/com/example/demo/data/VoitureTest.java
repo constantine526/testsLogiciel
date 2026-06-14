@@ -39,5 +39,13 @@ public class VoitureTest {
 
     assertEquals("Peugeot", v.getMarque());
 }
+    @Test
+    void testPrix() {
+    Voiture v = new Voiture();
+
+    v.setPrix(15000);
+
+    assertEquals(15000, v.getPrix());
+}
 }
 
