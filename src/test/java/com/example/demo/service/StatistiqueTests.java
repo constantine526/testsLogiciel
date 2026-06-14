@@ -42,12 +42,25 @@ public class StatistiqueTests {
 }
 
 @Test
-void testExceptionListeVide() {
+    void testExceptionListeVide() {
     Statistique stat = new StatistiqueImpl();
 
     assertThrows(ArithmeticException.class, () -> {
         stat.prixMoyen();
     });
+}
+@Test
+    void testScenarioComplet() {
+    Statistique stat = new StatistiqueImpl();
+
+    stat.ajouter(new Voiture("BMW", 1500));
+    stat.ajouter(new Voiture("Audi", 2500));
+    stat.ajouter(new Voiture("Mercedes", 2000));
+
+    Echantillon e = stat.prixMoyen();
+
+    assertEquals(2000, e.getPrixMoyen());
+    assertEquals(3, e.getNombreDeVoitures());
 }
     
 
