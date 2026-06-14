@@ -40,6 +40,15 @@ public class StatistiqueTests {
     assertEquals(2000, e.getPrixMoyen());
     assertEquals(2, e.getNombreDeVoitures());
 }
+
+@Test
+void testExceptionListeVide() {
+    Statistique stat = new StatistiqueImpl();
+
+    assertThrows(ArithmeticException.class, () -> {
+        stat.prixMoyen();
+    });
+}
     
 
 }
