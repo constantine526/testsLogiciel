@@ -55,6 +55,16 @@ void testStatistiqueVide() throws Exception {
     mockMvc.perform(get("/statistique"))
             .andExpect(status().isOk()); // ou erreur selon impl
 }
+@Test
+void testCycleCompletWeb() throws Exception {
+
+    mockMvc.perform(post("/voiture")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content("{\"marque\":\"BMW\",\"prix\":1000}"));
+
+    mockMvc.perform(get("/statistique"))
+            .andExpect(status().isOk());
+}
 
   
 
