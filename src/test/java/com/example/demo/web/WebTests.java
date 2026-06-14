@@ -49,6 +49,13 @@ void testStatistique() throws Exception {
             .andExpect(status().isOk());
 }
 
+@Test
+void testStatistiqueVide() throws Exception {
+
+    mockMvc.perform(get("/statistique"))
+            .andExpect(status().isOk()); // ou erreur selon impl
+}
+
   
 
 }
