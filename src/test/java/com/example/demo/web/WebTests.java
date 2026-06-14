@@ -27,6 +27,15 @@ class WebTests {
     @Autowired
     MockMvc mockMvc;
 
+    @Test
+void testAjoutVoitureWeb() throws Exception {
+
+    mockMvc.perform(post("/voiture")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content("{\"marque\":\"f\",\"prix\":100}"))
+            .andExpect(status().isOk());
+}
+
   
 
 }
