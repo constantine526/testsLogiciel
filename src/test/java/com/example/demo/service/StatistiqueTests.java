@@ -62,6 +62,17 @@ public class StatistiqueTests {
     assertEquals(2000, e.getPrixMoyen());
     assertEquals(3, e.getNombreDeVoitures());
 }
-    
+    @Test
+void testStatistiqueComplet() {
+    Statistique stat = new StatistiqueImpl();
+
+    stat.ajouter(new Voiture("A", 1000));
+    stat.ajouter(new Voiture("B", 3000));
+    stat.ajouter(new Voiture("C", 2000));
+
+    Echantillon e = stat.prixMoyen();
+
+    assertEquals(2000, e.getPrixMoyen());
+}
 
 }
