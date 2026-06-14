@@ -16,7 +16,17 @@ public class StatistiqueTests {
 
     assertEquals(1, 1);
 }
+ @Test
+    void testMoyenneUneVoiture() {
+    Statistique stat = new StatistiqueImpl();
 
+    stat.ajouter(new Voiture("Ferrari", 2000));
+
+    Echantillon e = stat.prixMoyen();
+
+    assertEquals(2000, e.getPrixMoyen());
+    assertEquals(1, e.getNombreDeVoitures());
+}
     
 
 }
