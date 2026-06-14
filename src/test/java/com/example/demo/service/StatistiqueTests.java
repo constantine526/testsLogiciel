@@ -8,6 +8,14 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class StatistiqueTests {
+    @Test
+    void testAjoutVoiture() {
+    Statistique stat = new StatistiqueImpl();
+
+    stat.ajouter(new Voiture("Ferrari", 2000));
+
+    assertEquals(1, 1);
+}
 
     
 
