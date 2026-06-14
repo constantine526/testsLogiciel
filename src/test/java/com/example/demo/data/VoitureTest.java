@@ -9,9 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 public class VoitureTest {
 
- @SpringBootTest
-public class VoitureTest {
-
     @Test
     void creerVoiture() {
         assertEquals(1, 1);
@@ -26,4 +23,4 @@ public class VoitureTest {
         assertEquals(0, v.getId());
     }
 }
-}
+
